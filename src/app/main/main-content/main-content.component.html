@@ -1,0 +1,26 @@
+<div class="test-container">
+  <ng-container *ngFor="let item of list" [ngSwitch]="item.name">
+    <app-red *ngSwitchCase="'r'"></app-red>
+    <app-green *ngSwitchCase="'b'"></app-green>
+    <app-blue *ngSwitchCase="'g'"></app-blue>
+  </ng-container>
+</div>
+
+<div class="test-container">
+  <ng-container *ngFor="let item of list">
+    <app-red *ngIf="item.name === 'r'"></app-red>
+    <app-green *ngIf="item.name === 'b'"></app-green>
+    <app-blue *ngIf="item.name === 'g'"></app-blue>
+  </ng-container>
+</div>
+
+<div class="test-container">
+  <ng-container>
+<!--    <ng-template class="card-content"></ng-template>-->
+    <ng-container #cardContent></ng-container>
+  </ng-container>
+</div>
+
+
+
+
